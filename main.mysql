@@ -1,0 +1,20 @@
+show databases;
+
+create database coder_school;
+
+use coder_school;
+
+create table students if not exists students(
+	id int not null primary key AUTO_INCREMENT,
+    name varchar(50) not null,
+    last_name varchar(50),
+    age int,
+    language varchar(12) not null
+);
+
+
+insert into students(name, last_name, age, language) values("Bob", " ", 15, "Pascal");
+insert into students(name, age, language) values("Eric", 12, "Python");
+
+
+truncate table students;
